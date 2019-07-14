@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cadastrando</title>
+
+<style type="text/css">
+	
+	form {/*modifica tamanho formato do cadastro geral*/
+	width: 500px;
+	margin: auto;
+}
+
+input {/*formatar todos os inputs*/
+	font-family: 
+	font-weight
+	font-size
+}
+
+
+fieldset {
+	border-color: purple; /*formata toda a borda do cadastro de roxo*/
+	background: white;/*cor branca do cadastro para nao mudar caso body esteja de outra cor*/
+	margin
+}
+fieldset#mensagem {/*formatar fieldset especificos como sexo usuario endereço*/
+
+}
+</style>
+
+</head>
+<body>
+	<h1>cadastro de dados</h1>
+<!--tudo que esta em form vai ser o formulario em si-->
+	<form method="post" id="fContato" action="mailto:contato@google.com" oninput="calc_total();">
+	<fieldset id="usuario"><legend> identificação do usuario</legend><!--legend para cada titulo cadastro-->
+	<p><label for="cNome">nome:</label> <input type="text" name="tNome" id="cNome" size="30" maxlength="" placeholder="nome completo"></p><!--label para digitação, input para incluir varios detalhes-->
+	<p>senha:<input type="password" name="tSenha"></p>
+	<p>E-mail: <input type="E-mail" name="tMail"></p>
+	<fieldset id="sexo"><legend> sexo:</legend>
+	   <input type="radio" name="tsexo" id="cmasc"> <label for="cmasc">-masculino</label>
+	   <input type="radio" name="tsexo" id="cfemi"><label for="cfemi">-feminino</label> </fieldset> 
+	   <p>data de nascimento:<input type="date" name="tNasc"></p>
+	   <p><INPUT TYPE="reset" NAME="tMail" VALUE="Reset"/></p><!--resetar informaçoes erradas todas-->
+</fieldset><!--fieldset para cada bloco de cadastro-->
+
+<!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx>
+
+<fieldset id="objetivo"><legend>endereço do usuario</legend>
+<p>logradouro:<input type="text" name="tRua" id="cRua" size="15" maxlength="80" placeholder="Rua, Aven, Travess ..."></p>
+<p>numero:<input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+<p></p>
+<p><label for="cEst">estado:</label><select name="Test" id="cEst">
+	
+	<optgroup label="Região Sudeste"><!--optgroup grupo de opçoes de cada estado-->
+    <option value="RJ">Rio de Janeiro</option>
+	<option value="SP">São Paulo</option>
+	</optgroup>
+
+	<optgroup label="Região Sul">
+	<option value="SC">Santa Catarina</option>
+	<option value="cwb">Paraná</option>
+	</optgroup>
+</select></p>
+<p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="Ccid"
+	maxlength="40" size="20" placeholder="sua cidade" list="sua cidade" /></p><datalist id="cidades">
+		<option value="Rio de Janeiro"></option>
+		<option value="Nova iguaçu"></option><!--type tipo text-->
+		<option value="Niteroi"></option><!--placeholder o que vai preencher aparece caixa texto-->
+	</datalist><!--maxlenght espaçamento escrita pode ser digitado,size espaçamento vizivel-->
+</fieldset>
+
+<!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx>
+
+<fieldset id="mensagem"><legend>Mensagem do Usuario</legend>
+<p><label for="cUrg">Grau de urgencia</label>
+Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="5" />Máx</p>
+<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="deixe aqui sua mensagem"></textarea><p><label for="cMsg">Mensagem</label> <INPUT type="reset"><!--reset uma mensagem que vc não quis-->
+</p>
+</fieldset>
+
+<!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx>
+
+<fieldset id="pedido"><legend>Quero tal coisa</legend>
+	<p><input type="checkbox" name="tPed" id="cPed" checked="" />
+		<label for="cPed">Gostaria de adquirir tal coisa quando disponivel</label></p>
+<p><label for="cPed">Gostaria de adquirir tal coisa quando disponivel</label></p>
+<p><label for="cCor">Cor</label>
+	<input type="color" name="tCor" id="cCor" /></p>
+<p><label for="Qtd">Quantidade</label>
+	<input type="number" name="tQtd" id="cQtd" min="0" max="8" value="0"></p>
+<p><label for="cTot">Preço total: R$</label>
+	<input type="text" name="tTot" id="cTot" placeholder="preço total" readonly/></p>
+</fieldset><!--readonly para nao poder digitar, placeholder escrito transparente-->
+
+<!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx>
+
+<input type="submit" value="Enviar"/><!--enviar informaçoes-->
+ou
+<input type="image" name="foto de um enviar"><!--imagens de enviar-->
+<input type="button" value="Salvar" /><!--salva as informaçoes-->
+</form><!--final do formulario-->
+</body>
+</html>
+new2html pagina: 504-563
+<!---->
+/**/
+<!>
