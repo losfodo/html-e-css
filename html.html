@@ -1,0 +1,290 @@
+<!DOCTYPE html><!--indo na opçoes view-syntax-html: e digitando html:5 e 'tab' aparece o html padrão-->
+<html lang="pt-br"><!--digitara em html e lang brasileira-->
+<head><!--cabeçalho do html-->
+	<meta charset="UTF-8"><!--para as letras serem corrigidas muito importante utf 8-->
+	<title>HTML</title><!--aqui barra topo titulo do html-->
+
+	<style type="text/css">/*style onde ficara todo o css que edita visualmente a pagina*/
+		
+		aside#lateral {/*unico aside do code*/
+	display: block;
+	width: 400px; /*deixa tudo a direita*/
+	float: right;
+
+
+}
+
+figure{/*figure para ficar abaixo da foto*/
+float: left;/*foto a esquerda*/
+border: 1px solid #999;/*solid para colocar linha em volta da foto toda,999 é a cor*/
+margin-left:15px;/*mover a foto um pouco para a esquerda*/
+margin-right: 10px;/*move a foto para a direita*/
+padding:3px;/*distancia a foto*/
+}
+figcaption{
+	background: #ddd;/*cor cinza*/
+}
+	</style>/<!--style 2-->
+
+	<style type="text/css">/*style da tabela especifica*/
+table#tabelaspec {/*sobre a tabela, puxa a id tabela spec*/
+	border: 1px solid #606060;/*como as outras aqui edita a tabela, criar a borda linha, como é,e cor*/
+	border-spacing: 1px;/*espaçamento por todos os lados de bordas*/
+	margin-left: auto;/*vai esquerda do site*/
+	margin-right: auto;/*vai a direita do site, assim margin puxando de um lado para o outro fica n meio*/
+}
+	table#tabelaspec td {
+	border: 1px solid #606060;/*editando tabela */
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+</style>
+
+
+
+</head><!--final do cabeçalho-->
+<body style="background-color: pink;"><!--corpo da pagina onde vai ficar o html-->
+	<!--backgroud color muda toda a cor do site-->
+	<header><!--cabeçalho do titulo organizado-->
+	<hgroup><!--organização dos h1 h2 h3... com hgroup-->
+	<h1>titulo principal no h1, geral html</h1>
+	<h2 style="text-align: center">sengundo titulo Me livrando da maldição centralizando o texto h2</h2>
+     <h3>OBA! Me livrei!h3</h3>	
+     <h4>top top h4</h4>
+	</hgroup>
+	</header>
+	
+
+<h1>simbolos e detalhes escrita</h1>
+	<p>apartir daqui quebra a linha para baixo<br/>linha quebrada no paragrafo</p>
+	pode ser escrito sem paragrafo assim.
+	<p>dar espaçamento com&nbsp;&nbsp;&nbsp;&nbsp; assim........certo amigo</p>
+	<p>uso da quebra de linha palavra compridas quando minimiza pagina ex: super<wbr>human </p>
+
+	<p>agora simbolos abaixo: < > &le; &ge;<br> &pound; &yen; &euro; <br>&copy; &reg; &trade;<br>&infin; &plusmn; &eplus; &radic; &ne;<br>&Delta;<br>&larr; &rarr; &uarr; &darr; &harr;<br>&spades; &clubs; &hearts; &diams;</p>
+	
+	<b>para ficar em negrito</b> 
+     <i>para ficar em italico</i>
+     <p>um texto com um p pula paragrafo<span style="text-decoration: underline;">ex sublinhando aqui</span><br>com 'br' o texto vai uma a baixo</p>
+     <del>risca o nome no meio</del> <big>fica grande</big> <ins>ins sublinhado</ins> 
+     <strong>strong negrito tbm</strong> <del>del tachado</del> <mark>mark cor brilhante destacado</mark>
+     <font size="3" color="purple">Este é um texto em roxo cujo tamanho é 3</font>
+     <font face="verdana" color="green">Este é um texto utilizando a família Verdana em verde</font>
+   <p>a seguir<sub>subiscrito diminui a letra</sub><sup>diminui tbm mais um pouco acima</sup></p>
+   <p>regua horizontal divisão um risco linha 'hr' cor vermelha<hr color= "red">
+
+	<h1>imagens em html</h1>
+	<figure><!--mostrar escrita pequena abaixo da imagem-->
+<img src="fotosasuke.jpg" width="250" height="250" title="sasuke pensativo" style="float: left;margin-right: 10px"> <!--aqui vai uma foto pega no pc, title aparece escrita ao passa o mouse, width largura height altura foto-->
+<figcaption><!--escrita abaixo da foto com figcaption-->
+	susake com cachaça, escrita abaixo da foto
+</figcaption>
+</figure>
+<p>Nesse odio todo sera se estou vivendo ou apenas existindo. ao lado da imagem por causa do float</p><!--fica ao lado da imagem-->
+	
+<h3 style="clear:left;">a esquerda e não no lado da foto</h3>
+
+<h1>asides,artigos e footer ou final de sites</h1>
+<aside id="lateral"><!--id lateral para puxar no style e modificar o aside-->
+	
+	<p>este paragrafo esta num aside q seria o lado direito so site</p>
+</aside>
+
+<article>artigo aqui</article>
+
+<p></p>
+<footer>aqui fica no final site rodapé </br>referencias</footer>
+	
+	<h1>ir para outro site</h1>
+     <a href="google" target="_blank">para abrir link outra aba</a>
+     <a href="google" target="_self">para abrir link aba mesma pagina</a>
+
+<h1>tabela</h1>
+<table id="tabelaspec" border="1"><!--edição da tabela no style 2-->
+<caption> criando uma tabela abaixo status </caption><!--titulo acima da tabela-->
+<th>Coluna 1 cabeçalho</th><!--th deixa em negrito o texto para identificar melhor-->
+<th>th em negrito</th><th>3</th>
+<tr><td> inteligencia</td><td> 1,4 </td><td> 10 </td></tr><!--cada tr é uma linha com cada td bloco tabela-->
+<tr><td>charme</td><td> 2,3 </td><td> 9 </td></tr>
+<tr><td>força</td><td> 1,4 </td><td> 8 </td></tr>
+<tr><td>media</td><td> 1,7 </td><td> 9 </td></tr>
+<tr><td rowspan="2">foda 2 linhas</td><td> treinem mais </td>
+<tr><td> ok.. 2 linha</td></tr><!--com'rowspan 2'ocupa duas linhas-->
+<tr><td colspan="2">ocupa linha inteira</td></tr><!--ocupa duas linhas, e sobra uma vazia -->
+</table>
+
+<section>
+<h1>section</h1>
+<p>substitui a div, fazendo varias sections que quiser, organiza conteudos</p>
+</section>
+
+<div>
+  <h1>div</h1>
+  <p>para organizar o conteudo tbm</p>
+</div>
+
+<h1>usando iframe - mapa</h1>
+<iframe width="400" height="215" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+   src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed">
+</iframe><!--mostra um exemplo de um mapa com essa frame-->
+
+<h1>map, local clicavel da imagem</h1>
+<section><!--para organizar melhor conteudo como por exemplo uma div tbm faz-->
+	<p>clique nos kids que ouvem tame impala</p>
+<img src="tumblr_ouqltw7mZM1u38iwro1_500.jpg" usemap="#mapa"><!--usemap conectar imagem com map-->
+<map name="mapa"><!--com o name mapa-conectado con usemap, (como uma id de css)-->
+ 	<!--<area shape="poly" coords="direita,esquerda,aumenta," href="foto" target="janela">-->
+	<!--<area shape="rect" coords="centro,bordas" href="foto local ir" target="arquivo ou div especifica">-->
+	<area shape="rect" coords="200,400,400,300" href="#nao" target="_self"><!--cordenadas para clicar-->
+	<area shape="circle" coords="100,400,100,100" href="#isso" target="_self"><!--href e target de referencia, ir outro site ou local especifico do mesmo site no caso-->
+</map>
+<p> map de uma imagem modificadada atraves photoshop com f8 informaçoes e colocar tipo links na imagem direcionados com pixels/ estudar mais a respeito desse assunto</p>
+<h4 id="isso">ela bebendo ao som do tame impala</h4>
+<h4 id="nao">ele fumando ao som do tame impala</h4>
+</section>
+
+<h1>pontos, ordenados, numericos, entre outros...</h1>
+<h3>Lista Ordenada:</h3>
+<ol>
+  <li>Gás</li><!--li, para pontos dentro do ul, opçoes-->
+  <li>Luz</li>
+  <li>Telefone</li>
+</ol>
+
+<h3>Lista Não Ordenada:</h3>
+<ul><!--ul que cobre todo o menu-->
+  <li>Gás</li>
+  <li>Luz</li>
+  <li>Telefone</li>
+</ul>
+
+<h3>uso do select opçoes de escolha</h3>
+<select>
+	<option>Luz</option>
+	<option>Gas</option>
+	<option selected="">internet</option><!-- Este item aparece pré selecionado na lista -->
+</select>
+
+<h3>select multiple ex abaixo</h3>
+<form>
+	<select name="nomes" multiple>
+		<option value="joão">joão</option>
+		<option value="maria">maria</option>
+		<option value="junio">junio</option>
+	</select>
+</form>
+
+<h1>audio, para colocar musica</h1>
+<div id="tv-radio"><!--é genérico para organizar conteudo como <article>, <nav> e (usando class ou id) para css-->
+	<audio id="musica" controls="controls">
+		<source src="Eagles     Hotel California Lyrics song.mp3" type="audio/mpeg"/>
+	</audio>
+
+<h1>video, colocar video abaixo:</h1>
+	<video id="filme" controls="controls">
+	<source src="LASERDISC VISIONS.mp4" type="video/mp4"/>
+	usasse um convertedor de video e audio para funcionar no site como itunes entre outros
+	</video>
+</div>
+
+<h1>videos you tube colocar no site</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Iyy3YOpxL2k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+<h1>checkbox exemplo abaixo escolher varias opçoes</h1>
+<form>
+<p>opção geral abaixo</p>
+<label for="cb_1">Todos os Cursos</label> <input id="cb_1" type="checkbox" checked="Selecionado">
+<p>varias opçoes abaixo</p>
+     <input type="checkbox" name="chkfrutas" value="abacaxi"/>abacaxi
+	<br><input type="checkbox" name="chkfrutas" value="uva"/>uva<br/>
+	<input type="checkbox" name="chkfrutas" value="laranja"/>laranja
+</form>
+
+<H1>acesso rapido clicando no y com accesskey</H1>
+<a accesskey="y" href="https://www.youtube.com/" target="_blank">youtube'alt + botão atalho'</a>
+
+<h3 style="color: blue;">atalhos teclado para navegador</h3>
+<h3>Abas</h3>
+<p>Ctrl+1-8: Troca de abas, conforme a ordem que elas estão abertas;</br>
+
+Ctrl+W ou Ctrl+F4: Feche a aba atual;</br>
+
+Ctrl+Shift+T: Reabrir a última aba que foi fechada;</br>
+
+Ctrl+T: Abrir uma nova aba;</br>
+
+Ctrl+N: Abrir uma nova janela.</br></p>
+
+<h3>Navegação</h3>
+<p>Alt+esquerda, Backspace: Voltar uma janela;</br>
+
+Alt+direita, Shift+Backspace: Avançar uma janela;</br>
+
+F5: Atualizar a página;</br>
+
+Ctrl+F5: Atualiza a página e o cache do site;</br>
+
+ESC: Para de carregar;</br>
+
+Alt+Home: Abrir a página inicial.</br></p>
+
+<h3>Visualização</h3>
+<p>Espaço ou Page Down: Descer a uma janela;</br>
+
+Shift+Espaço ou Page Up: Subir uma janela;</br>
+
+Home: Vai para o topo da página;</br>
+
+End: Vai para o final da página.</br></p>
+
+<h3>Barra de Endereços</h3>
+<p>Ctrl+L ou Alt+D ou F6: Editar a barra de endereços;</br>
+
+Ctrl+Enter: Caso você digite apenas uma palavra na barra de endereços (“Google”, por exemplo), o atalho inclui WWW. e “.com” no começo e final do termo;</br>
+
+Alt+Enter: Abre o endereço digitado na barra de endereços em uma nova aba.</br></p>
+
+<h3>Histórico e Favoritos</h3>
+<p>Ctrl+H: Abre o histórico do navegador;</br>
+
+Ctrl+J: Abre janela de downloads;</br>
+
+Ctrl+D: Favorita o site atual;</br>
+
+Ctrl+Shift+Del: Abre a janela de limpeza de histórico do navegador.</br></p>
+
+<h3>Funções variadas</h3>
+<p>Ctrl+P: Imprime a página atual;</br>
+
+Ctrl+U: Abre o código-fonte da página (não funciona no Internet Explorer);</br>
+
+ALT+F4: Fechar navegador</br>
+
+WINDOWS + L:o computador é bloqueado de forma automática, sendo necessário digitar a senha novamente para abrir o Windows.</br></p>
+
+<h3 style="color: blue;">atalhos teclado para codar</h3>
+<p>ctrl+S: salva a programação</p>
+<p>CTRL + Z: que serve para retornar ao passo anterior, como se fosse uma tecla de recuperar.</p>
+<p>CTRL + C CTRL + V: copiar e colar</p>
+<p>CTRL+shift seta pro lado:vai selecionar as palavras ***** CTRL + A:todo o texto será selecionado.</p>
+<p>CTRL+ seta pro lado: pula lado pro lado</p>
+<p>CTRL+backspace:apaga palavra por palavra</p>
+<p>seleciona tudo+CTRL+.+,:coloca tudo para comentario ou remove de comentario</p>
+<p>CTRL + F:um campo de busca se abre e é possível procurar por palavras-chave em determinada página ou programa.</p>
+<p>Espaço ou Page Down: Descer a uma janela; *** Shift+Espaço ou Page Up: Subir uma janela;</p>
+<p>Home: Vai para o topo da página; *** End: Vai para o final da página.</p>
+<p>F5: Atualizar a página;</p>
+<p>Ctrl+1-8: Troca de abas, conforme a ordem que elas estão abertas;</p>
+<p>Windows  + Tab:Abrir a Visão de tarefas. / windows:abre iniciar</p>
+<p>seleciona + shift + tab:para voltar linhas*****tab para avançar linhas</p>
+<p>alt+cima e baixo:mudar um codigo, não funciona com sublime test no momento</p>
+<p>CTRL+TAB:troca de janela de programação, alternando apenas duas ultimas entradas</p>
+
+</body><!--final do corpo da pagina onde vai ficar o html-->
+</html><!--final do html-->
+<!>
+<!---->
+<!---->
+/**/
