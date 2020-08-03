@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <style>
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;/*alinha em linha completamente*/
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3) {/*pegar classe flexcontainer e pegar 3 filho div para editar css*/
+            background-color: indianred;
+            order: 1;/*fica com a ordem maior e vira ultimo elemento a div 3 no lugar do 4*/
+            order: 0;/*na 0 se mantem na mesma ordem q esta q seria 0*/
+            order: -1;/*ordem menor q as outras efica no lugar da div1 estando 3,1,2,4*/
+            align-self: center;/*centraliza apenas a div 3 de cima para baixo*/
+            align-self: flex-end;/*vai para o final em baixo container*/
+            align-self: flex-start;/*fica no inicio em cima do container*/
+            align-self: stretch;/*default volta onde estava*/
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0;/*ocupar exatamente do mesmo tamanho sem ocupar os px q sobraram do container*/
+            flex-grow: 1;/*todas as divs crescem com o 1 de forma igual pra cada preenchendo os px q sobram do container*/
+        }
+
+        .flex-container div:nth-child(1) {/*focar agora no primeira div do codigo*/
+            flex-grow: 2;/*aumenta a div um mais q as outras em 2 vezes*/
+        }
+
+        .flex-container {
+            width: 300px;/*diminui o container em si e ajusta o tamanho mesmo px pra cada*/
+            flex-shrink: 1;/*encolhe um pouco mais casa um das divs do container*/
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5;/*encolhe em 5x a div um apenas*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>

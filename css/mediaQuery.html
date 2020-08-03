@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query</title>
+    <style>
+        div {
+            font-size: 40px;
+            margin: 20px;
+            padding: 20px;
+            background-color: coral;
+            border: solid 5px;
+            display: none;/*none para manter invisivel*/
+        }
+
+        @media (max-width: 600px) {/*@media gerar uma condição largura maxima*/
+            .muito-pequeno { display: block; }/*classe css o muito pequeno,, ou seja se a largura maxima for 600px ou menos exibe com display block é uma condição*/
+        }
+
+        @media (max-width: 1000px), (orientation: portrait) {/*se a largura maxima for 1000 ou menos..*/
+            .pequeno-retrato { display: block; }/*mostra pequeno retrato no site*/
+        }/*orientation:landscape a mudança é constante com o portrait mudança é repentina */
+
+        @media (min-width: 500px) and (max-width: 1000px) {/*500>=1000 entre esses px ..*/
+            .intervalo { display: block; }/*aparece entre px intervalo*/
+        }
+    </style>
+</head>
+<body>
+    <div class="muito-pequeno">Muito Pequeno</div>
+    <div class="pequeno-retrato">Pequeno ou Retrato</div>
+    <div class="intervalo">Intervalo</div>
+</body>
+</html>

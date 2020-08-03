@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+        /* https://caniuse.com/#feat=css-grid *//*sobre css grid site*/
+        
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);/*ocupar 100% e menos 40px dos lados cima baixo do corpo fazendo display flex ficar embaixo do outro e não em linha*/
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;/*alinha os itens tanto borda quanto texto em si as vezes diminui a borda*/
+            justify-content: center;/*justify-content — controla o alinhamento de todos os itens no eixo principal. align-items — controla o alinhamento de todos os itens no eixo transversal. align-self — controla o alinhamento individual de um item no eixo transversal*/
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+
+        body {
+            display: grid;/*display grid o msm q flex mas aumentou um pouco as divs*/
+            grid-template-columns: 50% 50%;/*duas colunas esquerdo e direito ocupando 50% do espaço cada*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);/*fica 12 em linha com 8,33% cada completando 100% todas*/
+            grid-template-columns: repeat(12, 8.33%);/*12 vezes 8,33% mesmo q o de cima em linha completo,, se fosse em 4 vezes teria 3 colunas de 4 divs..*/
+            grid-template-columns: repeat(11, 100px) 100px;/*11 vezes valor 100px alargando site da esquerda para direita*/
+            /* minmax(100px, 300px) colocar minimo 100px e maximo 300 */
+            grid-template-columns: 200px 20% 1fr;/*primeira linha da coluna 200px,segunda mesma linha 20%,3fragmentos o que sobrou resto*/
+            grid-template-columns: 3fr 6fr 3fr;/*com fragmentos agora o meio tera o dobro de fragmentos ou seja maior*/
+            grid-template-rows: 50% 25% 12.5% 12.5%;/*primeira linha da primeira coluna 50%,segunda coluna e linha 25%,3 é 12,5,4...*/
+            grid-template-rows: 100px 1fr;/*100px linha e coluna 1 inteira,1fr linha e coluna 2,3 e 4 resto divididos entre si */
+            grid-template-rows: 100px auto auto auto;/*primeira linha 100px e outras divididas iguais,,colocando todos auto de acordo com numero de colunas ajusta a numeração -1-2 0 1 2...*/
+        }
+
+        .d8 {/*div 8*//*ajustando auto auto auto acima...*/
+            grid-column-start: 2;/*na coluna 2 pulando linha a linha..*/
+            grid-column-end: 4;/*até linha 4 ocupando o 8 e 9 div*/
+            grid-column-end: span 2;/*começa linha 2 e de span de duas casa fica na div 8 e 9 tbm*/
+            grid-row-start: 3;/*inicia na linha 3...*/
+            grid-row-end: 5;/*até a linha 5 ocupando 10 e 11.*/
+            grid-row-end: span 2;/*ou apenas span 2 fazendo o msm */
+        }
+
+        .d10,
+        .d11 {
+            /* podem se sobrepor */
+            grid-column-start: 1;/*linha 1...*/
+            grid-column-end: 3;/*e final 3.mas não ocupa no topo do 1 e sim embaixo a esquuerda*/
+            grid-row-start: 5;/*começa linha 5*/
+            grid-row-end: span 1;/*sumiu 10  e 11 aumenta*/
+        }
+
+        .d10 {
+            z-index: -1;/*quem fica na frente de quem se negativo o numero 11 na frente de 10, se positivo 10 na frente*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+</body>
+
+</html>

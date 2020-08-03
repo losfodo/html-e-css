@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .seletor {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            /* multiplos valores */
+            border: solid 5px navy; /* shorthand property */
+            font-family: Helvetica, sans-serif;
+            /* funções */
+            width: calc(100% - 40px);/*aumenta 100% e diminui 40px da letra*/
+            background-color: rgb(34, 153, 189);/*vermelho verde e azul para formar a cor*/
+        }
+
+        /* Usando uma pseudo-classe */
+        .seletor:hover {/*pseudoclasse hover : quando vc passa o mousse e a cor muda*/
+            background-color: orangered;/*do azul vai para o laranja*/
+        }
+
+        /* Usando um pseudo-elemento */
+        .seletor::first-letter {/*para aplicar um estilo a uma letra especifica*/
+            font-size: 60px;/*primeira letra aumenta tamanho*/
+            font-weight: bold;/*font mais gordinha como um negrito nela*/
+        }
+
+        /* padrão de nomenclatura? */
+        /* dash-case ou camelCase? *//*dash-case:separado por hifen font-size e camelcase: fontSize*/
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>

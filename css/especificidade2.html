@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://specificity.keegan.st/ *//*link calculadora especificidades em geral qual prevalece*/
+        /*
+            1. Inline
+            2. ID
+            3. Classe, Pseudo-Classe, atributo
+            4. Elemento, Pseudo-Elementos
+        */
+
+        body { font-size: 40px; }/*aumenta todas as letras do corpo em geral*/
+
+        div { background-color: #00B; color: #fff; }/*fundo azul com letras em branco*/
+        div[wm-cor] { background-color: darkorange; }/*prevalece com []*/
+        div.estilo { background-color: green; }/*mesmo nivel prevalece backgroud mais a baixo..baixo p cima*/
+        #unico1, #unico2 { background-color: #000; }/*id no caso ganha de classe e hover não surte efeito*/
+        div:hover, #unico1:hover { background-color: purple; }/*hover passa o mouse e a cor muda,,mesmo nivel de especificidade mas com hover  prevalece a ultima de baixo para cima*/
+    </style><!--então coloca se a id no hover para funcionar-->
+</head>
+
+<body>
+    <div id="unico1" class="estilo" style="background-color: red;"><!--mas com inline pprevalece e o hover não funciona passando o mouse-->
+        #unico1 vs .estilo vs inline
+    </div>
+    <div id="unico2" class="estilo">#unico2 vs .estilo</div>
+    <div class="estilo" wm-cor>.estilo vs wm-cor</div>
+    <div wm-cor>wm-cor</div>
+    <div class="estilo">.estilo</div>
+    <div>elemento</div>
+</body>
+
+</html>

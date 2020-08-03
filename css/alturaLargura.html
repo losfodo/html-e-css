@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+        html {
+            height: 100%;/*html considera 100% largura mas altura não*/
+        }
+
+        body {
+            font-size: 40px;
+            background-color: coral;
+            height: 100%;
+            margin: 0;/*margem 0 para fixar tudi certinho*/
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        span,
+        div {
+            width: 50%;
+            height: 250px;/*considera com px mais q porcentagem*/
+            height: 50%;
+            display: block;/*se for inline desconsidera largura de 50%*//*com block funciona normal*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>Título</div>
+    <span>Subtítulo</span>
+</body>
+
+</html>

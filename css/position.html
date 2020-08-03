@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+            color: #fff;
+        }
+
+        .static {
+            top: 100px;/*não faz muita diferença em mudança pq div ja foi alterada*/
+            left: 100px;/*top left movimenta de cada um separadamente*/
+            background-color: steelblue;
+        }
+
+        .fixed {/*usado muito como banner de promoção entre outros*/
+            position: fixed;/*colocando em fixed levara em consideração as alteraçoes q colocar css e fica fixado na tela sempre visivel*/
+            bottom: 30px;/*posição a 30px para baixo se seperando da organização da div*/
+            right: 0px;/*colado a direita do site*/
+            background-color: tomato;
+        }
+
+        .relative1 {
+            position: relative;/*espaçamento sempre relativo ao elementos ao redor muda mas não muito*/
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            position: absolute;/*passa por cima de outros elementos não importa a ordem não consideram a margem dos outros apenas do site em si*/
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategrey;
+        }
+
+        .absolute2 {/*absolute dentro de um relative*/
+            position: absolute;/*se posiciona dentro de relative 2 de forma absoluta se mantendo dentro,,*/
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky {
+            position: -webkit-sticky; /* para aplicar class css no safari e funcionar browser */
+            position: sticky;/*continuar na mesma posição mas indo abaixo do site ele se mantem*/
+            background-color: #777;
+            top: 10px;/*quando chegar a 10px do top onde sticky se posiciona ele se mantem no site */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p><!--espaçamento para baixo-->
+</body>
+
+</html>

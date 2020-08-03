@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"><!--import de font-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {/*seletor universal*/
+            box-sizing: border-box;/*borda padrão de html?*/
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;/*formato da letra*/
+            background-color: lightgray;
+        }
+
+        .cabecalho {
+            background: #333;
+            border-bottom: solid 5px #4faddb;/*borda em baixo o risco azul 5px espessura*/
+            height: 80px;
+            box-sizing: content-box;/*para deixar a borda do lado de fora do conteudo mudança minima*/
+        }
+
+        .logo {/*logo imagem*/
+            display: inline-block;/*logo na mesma linha do conteudo adjacente*/
+            height: 80px;
+            padding: 15px;/*espaçamento em todas as direçoes*/
+        }
+
+        .logo img {
+            height: 100%;/*para a imagem ocupara 100% di tamanho do header*/
+        }
+
+        .menu-toggle {/*menu de opçoes */
+            float: right;/*mandar para o canto direito do site*/
+            color: #eee;
+            background-color: #555;
+            border: solid 1px #777;
+            border-radius: 5px;/*arredondamento nas curvas pontas de 5px*/
+            height: 40px;
+            padding: 10px 20px;
+            margin: 20px 15px;
+        }
+
+        .menu {
+            display: inline-block;/*colocar as opçoes menu no header */
+            vertical-align: top;/*alinha corretamento ao topo do site*/
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu ul {
+            margin: 0;/*disconsiderando todas margem padding dos ul letras do menu*/
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;/*todos os li do menu na mesma linha*/
+        }
+
+        .cabecalho a {
+            text-decoration: none;/*tira a linha embaixo de a dos links<a>*/
+            color: #eee;
+            font-size: 1.3em;/*aumenta a fonte letra*/
+        }
+
+        .menu a {
+            padding: 15px;/*espaçamento entre links letras do menu*/
+        }
+
+        .autenticacao {
+            float: right;/*login e registro a direita do site*/
+            height: 80px;
+            padding: 25px;
+        }
+
+        .menu a:hover,
+        .menu a.selected {/*se colocar hover mudar cor ou se estiver selecionado fica a mesma cor menu de nav*/
+            background-color: #4faddb;/*fundo azul*/
+            color: #000;/*ao passar mouse letra preta*/
+        }
+
+        .botao {
+            border-radius: 30px;/*borda arredondada*/
+            padding: 10px 25px;
+            margin: 10px;
+        }
+
+        .destaque {/*botão registrar em especifico coloração*/
+            background: #f50a31;
+            color: #fff;
+        }
+
+        @media(min-width: 679px) {/*largura minima 679px ou mais*/
+            .menu-toggle {
+                display: none;/*fica invisivel sumir menu opçoes e aparecer toggle*/
+            }
+        }
+
+        @media(max-width: 680px) {/*até 680px largura maxima do site*/
+            .menu {
+                display: none;/*fica invisivel*/
+            }
+        }
+
+        @media(max-width: 910px) {/*910px p menos */
+            .autenticacao {/*autentificação fica com display none ou seja sumir*/
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" /><!--logo imagem-->
+            </a>
+        </div>
+        <button class="menu-toggle"><!--menu-toggle:abrir e fechar menu-->
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a><!--usa # pra navegar na mesma pagina preferencia-->
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a><!--# das opçoes...........-->
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>/*ficar seleciona ao clicar nas opçoes via js..*/
+        window.onhashchange = function(e) {/*onhashchange chama a função q recebe evento*/
+            const oldURL = e.oldURL.split('#')[1]/*com função tenho url antiga do site a parte depois do #*/
+            const newURL = e.newURL.split('#')[1]/*[1] pega indice 1, 0 é antes do #*/
+            console.log(oldURL, newURL)/*no console aparecer url antiga e url nova*/
+            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)/*pegar link com valor #url #inicio #contato.. ex*/
+            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)/*pega antigo e recem clicados */
+            oldLink && oldLink.classList.remove('selected')/*tirar do q acabou de sair e ir no novo..*/
+            newLink && newLink.classList.add('selected')/*add selected novo*/
+        }
+    </script>
+</body>
+
+</html>

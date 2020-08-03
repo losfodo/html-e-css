@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .c1 {
+            background-color: red;
+            float: right;/*flutuando do lado direito com verde a esquerda*/
+        }
+        
+        .c2 {
+            background-color: green;
+            clear: right;/*limpar ou não ocupa a mesma linha que o vermelho e sim fica abaixo*/
+            float: left;/*some a cor laranja e azul fica no topo*/
+        }
+        
+        .c3 {
+            background-color: blue;
+            clear: both;/*assim não fica uma cor tapando a outra pois limpa esquerda e direita*/
+        }
+
+        .c4 {
+            background-color: orange;
+            float: right;/*laranja a direita do site*/
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+            /*display:inline;se colocar display inline: um do lado do outro em apenas bckground sem escritas ele some*/
+            /*float:right; as cores background ficam a direita alinhados se left a esquerda */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>

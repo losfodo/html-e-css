@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #03</title>
+    <style>
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;/*row: fica em linha ,,flex-direction: column; fica em coluna sai de linha*/
+        }
+
+        .flex-container div {/*obs:flex-basis mais especifico q widht por consideração*/
+            flex-basis: 100px;/*aumenta a largura para linha row ou  altura para column de cada elemento div interna do container*/
+            width: 200px; /* não muda nada se tiver flex-basis ativo, se não aumenta 200px,,vai perder */
+        }
+
+        .flex-container div:nth-child(4) {/*div 4 interna do container*/
+            /* grow:aumentaX, shrink:encolheX, basis:aumenta a largura para linha row ou  altura para column.. abaixo.. */
+            flex: 3 6 100px;/*grow,shrink,basis..aumentando o elemento div 4 dentro do container*/
+        }
+
+        .flex-container {
+            width: 300px;/*diminui o tamanho de todos principalmente 4 q ja foi editado*/
+            width: 600px;/*e com 600px ja aumenta bastante*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>

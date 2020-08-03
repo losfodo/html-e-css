@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #02</title>
+    <style>
+        .fora {
+            position: relative;/*relative:*/
+            background-color: orange;/*obs: tamanho do background color conta tbm com o tamanho da letra se tiver */
+            height: 400px;
+            width: 400px;
+            padding: 50px;/*aumenta a background em 50px todos os lados no total por ex: height: 500px*/
+        }
+
+        .dentro {/*padding de .fora da espaçamento interno para .dentro de 50px entre os lados*/
+            background-color: mediumvioletred;
+            height: 100px;
+            width: 100%;/*100% do conteudo respeitando o padding*/
+            position: static; /* conteudo,,static:posição padrão */
+            position: relative; /* conteudo..position relative posiciona o elemento em relação a si mesmo, o canto superior esquerdo começa por ali */
+            position: absolute; /* conteudo + padding,,absolute independente do .fora agr ultrapassa o padding */
+            position: fixed; /* viewport,,posição fixa não muda alterando tamanho do site */
+        }
+    </style>
+</head>
+<body>
+    <div class="fora">
+        <div class="dentro"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: #fff;/*cor da letra*/
+            background-color: coral;/*cor da pagina*/
+        }
+
+        ul { padding: 0; }
+        div { background-color: seagreen; }
+        span { background-color: dodgerblue; }
+        li { background-color: purple; }
+
+        div, span, li {
+            width: 50%;/*background ocupara da esquerda para direita metade da pagina 50%*/
+            width: 200px;/*não pode duas width e não faz diferença nenhuma,,exceto no span desconsidera largura e altura apenas se tiver display block*/
+            height: 80px;/*inline e block separados causa erro height width,,aumenta o background color cima baixo px*/
+            padding-top: 30px;/*aumenta mais 30px para baixo*/
+            text-align: center;/*alinha o texto para centro*/
+           /* display: inline;/*ficam na mesma linha com inline*/
+            display: block;/*cada elemento vai ter sua propria linha com display block*/
+            display: inline-block;/*coloca junto sem erros agr,,mantem a mesma linha mas leva em consideração a altura e largura dos backgrounds span tbm */
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        .unidades-absolutas {
+            position: absolute;/*posiciona de forma absoluta na tela*/
+            font-size: 40px;/*aumenta letra*/
+            padding: 20px;/*separar as div mais organizado*/
+            border: solid 5px #222;
+            margin: 30px;/*margem  da tela a borda para ajeitar*/
+            width: 4cm; /* pouco usado centimentro aumenta borda */
+            height: 20mm;  /* pouco usado milimetros */
+            top: 150px;/*distancia do topo da pagina a borda levada em consideração por causa position: absolution*/
+            left: 200px;/*levada em consideração por causa position: absolution o left*/
+        }
+
+        .unidades-relativas {
+            position: absolute;/*position absolution é para posicionar de forma absoluta do jeito que quiser como abaixo..*/
+            font-size: 4em;/*letra aumenta 4x o seu tamanho*/
+            padding: 5%;/*distancia em porcentagem*/
+            border: solid 1vw #222;/*1vw tamanho da largura da tela do porte*/
+            margin: .8%;
+            width: 20vw;/*distanciamentos de borda em geral 20%largura,cresce largura a borda tbm*/
+            height: 15vh;/**/
+            bottom: 5%;
+            right: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>

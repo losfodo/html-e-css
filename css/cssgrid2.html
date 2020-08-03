@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #02</title>
+    <style>
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+
+        body {
+            display: grid;/*aciona o layout grid distribuindo os tamanhos*/
+            grid-template-columns: /*colocando em linha cada um*/
+                [inicio] 1fr /*primeira linha entre cochetes inicio*/
+                [metade-1 meio-1] 1fr /*ou se coloca se nome em cada linha..*/
+                [metade-2 meio-2] 1fr [fim];
+            grid-template-rows: repeat(3, 1fr);/*fica igual mas diminui as divs a de cima mas fica 6 invisiveis no site teoricamente*/
+
+            grid-column-gap: 20px;/*separação das colunas de 20px deixando de ficar colada o meio 1*/
+            grid-row-gap: 20px;/*separação em todas as linhas*/
+            grid-gap: 50px 10px;/*50px linhas e 10 px colunas separação*/
+            grid-gap: 10px;/*tanto linhas e colunas 10px*/
+        }
+
+        .d1 {/*elemento 1..*/
+            grid-column-start: metade-2;/*começa na penultima e termina na ultima*/
+            grid-column-end: fim;/*ultima aki, outros 2 vão para linha de baixo o 2 e 3 da div*/
+            grid-column: meio-1 / fim;/*linha 2 /'barra resolver em uma linha de codigo' linha final 4 ou seja 1 ocupando do 2 até o 4*/
+            grid-row: 1 / span 2;/*começa na primeira linha e da um span de 2*/
+            /* row-start column-start row-end column-end */
+            grid-area: 1 / meio-1 / span 3 / fim;/*começa da linha 1 e da um span de 3 aumentando em 3 camadas o 1 de cima para baixo e meio até o fim linhas*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+</body>
+
+</html>

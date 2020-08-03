@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css"><!--conectado na pasta css arquivo tag.css-->
+    <style>
+       /* * {  //seletor universal seleciona tudo em geral letras e corpo da pagina
+
+        }
+
+        .tag{  //seletor de classes class
+
+        }
+
+        #aprovados{  //seletor com id
+
+        }
+
+        #alinhado > div{  //id alinhado que pegar a 'div' dentro do elemento id alinhado
+
+        }
+
+        #alinhado  section{  //qualquer descendente de id alinhado sera selecionado no caso a section
+
+        }
+
+        p + ul{   //um p paragrafo depois vem um do lado do outro mas não dentro o ul que é o selecionado apenas
+
+        }
+        p ~ ol{    //que estão proximos dai ol é selecionado com ~
+
+        }
+        
+         [feira~=empresa]{   //faz css em feira entre coxetes ou  com [feira=casa] apenas esse em especifico
+              /*com ~ seleciona se estiver indicado empresa escritorio
+         } 
+         /*[feira*=sa]{
+             com *=sa todos que tiver sa como empresa e casa mudam com css       
+         }
+
+         span:nth-child(1){    //envolve filho,, tag span q seja filho de alguem numero 1 da tag ser for segundo não vai
+           
+        }
+        
+        section > :nth-child(odd){} //tem as section e nelas tem os filhos impares os odd ou  (even):que seriam os pares
+        
+        section > span:nth-child(odd),ul,p{} //alem dos impares os ul e p tbm são modificados por css
+         */
+ 
+        section > span:nth-of-type(2) {/*segundo elemento dentro da section que representa um spam começando apartir de 1*/
+            color: #ff0;
+            background-color: #f77;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

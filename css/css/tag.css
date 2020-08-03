@@ -1,0 +1,24 @@
+body {/*conectado ao arquivo seletores.html e classetag.html*/
+    font-size: 40px;/*aumenta a letra*/
+}
+
+ul, ol {
+    padding: 0;/*ficar colado a esquerda com 0*/
+}
+
+li {
+    margin-left: 60px;/*define a área de margem nos quatro lados do elemento.*/
+}
+
+.tag {/*class*/
+    border: solid 4px;/*borda tipo tabela*/
+    margin: 5px;/*define a area da margem organizar melhor uma div ou tabela*/
+}
+
+.tag label {/*label adicionada no js ol ul div form editados não a numeração..*/
+    color: #fff;
+    font-size: 25px;
+    vertical-align: top;/*alinhado um pouco para cima*/
+    margin-right: 10px;/*margem direita distanciamento p div com numeros*/
+    padding: 0px 5px 3px 3px;/*É um atalho que evita definir uma distância para cada lado separadamente*/
+}

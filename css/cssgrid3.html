@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #03</title>
+    <link rel="stylesheet" href="css/tag.css"><!--Uma folha de estilo é preferida, referencia tag css-->
+    <style>
+        * {/*seleciona todos*/
+            padding: 0;/*bem colado as divs sem espaçamento*/
+            margin: 0;
+        }
+
+        header {
+            grid-area: cabecalho;/*sera usado os grid-area para mostrar como sera separado cada um em grid*/
+        }
+
+        nav {
+            grid-area: navegacao;
+        }
+
+        main {
+            grid-area: conteudo;
+        }
+
+        footer {
+            grid-area: rodape;
+        }
+
+        body {
+            display: grid;/*fica tudo embaralhado ou empilhado junto no começo..*/
+            min-height: 100vh;/*altura minima 100vh*/
+            grid-template-columns: 300px 1fr;/*primeira coluna 300px, segunda resto todo*/
+            grid-template-rows: 100px 1fr 100px;/*primeira linha cabeçario100px,meio conteudo espaço inteiro,embaixo 100px*/
+            grid-template-areas:/*apartir desta propriedade q defino como tela fica*/
+                'cabecalho cabecalho'/*6 espaços totais ,primeira começam 300px e 1fr grid template columns*/
+                'navegacao conteudo'/*segunda linha ..navegação 100px apenas.. conteudo 1fr */
+                'rodape rodape';/*final 100px de rodapé*/
+        }
+
+        @media(max-width: 700px) {/*@media gerar uma condição largura maxima*/
+            body {
+                grid-template-columns: 1fr;/*unica coluna frame*/
+                grid-template-rows: 80px 1fr 100px;
+                grid-template-areas: 'navegacao' 'conteudo' 'rodape';/*deixar em uma visão mais mobile para celular mais espremido na abaixo 700px*/
+            }
+
+            header { display: none; }/*remove header na versão + mobile*/
+        }
+    </style>
+</head>
+
+<body>
+    <main class="tag">CONTEÚDO</main>
+    <header class="tag">CABEÇALHO</header>
+    <footer class="tag">RODAPÉ</footer>
+    <nav class="tag">NAVEGAÇÃO</nav>
+
+    <script src="js/tag.js"></script><!--referencia tag js-->
+</body>
+
+</html>

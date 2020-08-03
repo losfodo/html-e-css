@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        /* ... */
+        * {
+            margin: 0;
+        }
+
+        html {
+            font-size: 28px;/*multiplica pelo raiz ou o q for aumenta letra*/
+        }
+
+        body {
+            display: flex;/*Flex Itens, para se comportarem como caixas flexíveis*/
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div {
+            font-size: 50px;/*aumenta a letra*/
+        }
+
+        p {
+            /* valores padrões */
+            font-size: 1em;/*uma vez o tamanho padrão*/
+            font-size: 100%;/*valor padrão tbm,,mexendo no site fica maior ou menor relativamente*/
+            font-size: 16px;/*valor de referencia padrão*/
+            font-size: 12pt;/*pt pontos o 12 valor padrão equivalente em todos do p acima*/
+
+            /* unidades absolutas */
+            font-size: 100px; /* tamanho do pixel é relativo */
+            font-size: 72pt; /* pontos */
+            font-size: 1in; /* polegada */
+
+            /* unidades relativas */
+            font-size: 2.2em;/*pega tamanho padrão 16px e multiplica por 2.2 porem diminuiu a fonte*/
+            font-size: 2.2rem;/*2x referencia maior da raiz*/
+            font-size: 50vh;/*altura viewporte não muito usado*/
+            font-size: 10vw;
+
+            font-family: monospace;/*letras ocupam mesmo espaço*/
+            font-family: Georgia, serif;/*fonte georgia mas se não achar vai serif letras tipo if else*/
+            font-family: Verdana, sans-serif;/*fonte mais quadradona*/
+            font-family: 'Indie Flower', cursive;/*mais comum de escrita*/
+
+            font-weight: 100;/*fonte peso negrito 100 normal a 900 negrito forte*/
+            font-style: italic;/*italico*/
+            text-transform: uppercase;/*Coloca todas as letras em maiúscula,,Capitalize = As primeiras letras de cada palavra ficam com letras maiúsculas*/
+            /* text-decoration: overline underline line-through; *//*letra acima da linha,letra abaixo linha,cortando com linha*/
+            word-spacing: 10px;/*separação entre as palavras*/
+            letter-spacing: 20px;/*separação entre as letras*/
+            line-height: 2.5em;/*altura espaçamento aumenta*/
+            text-align: center;/*centraliza o texto*/
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;/*tira a linha sublinhada abaixo do texto pq é <a> */
+            padding: 10px 30px;/*10px vertical cima baixo,30px horizontal esquerda direita*/
+            border-radius: 25px;/*borda arredondada*/
+        }
+
+        .destaque {
+            color: #fff;/*cor da letra branca*/
+            background: tomato;/*fundo vermelho*/
+            box-shadow: 2px 2px 1px 1px #000;/*sombra preta efeito mais 3d*/
+        }
+
+        .destaque:active {/*especificidade maior q anteriores pq tem classe e pseudo classe*/
+           box-shadow: none; /*tira o sombreamento ao clicar*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>
