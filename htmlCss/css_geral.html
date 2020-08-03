@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--onde fica as css normalmente-->
+	<meta charset="UTF-8">
+	<title>css</title>
+
+	<style type="text/css">
+		body {/*edição corpo da pagina*/
+	font-family: arial, sans-serif;/*muda corpo site as letras font family*/
+	background-image: url(""); /*coloca imagem no fundo site, caso queira*/
+	background-color: #FF69B4 ;/*cor do fundo do site, rosa*/
+	color: black;/*muda a cor da letra do html em geral*/
+}
+	</style>
+
+	<style type="text/css">/*edição do background movel da pagina*/
+	#idposi{
+		background-color:blue;
+		position: fixed;/*fixed deixa imovel no site*/
+		height: 100px;
+		width: 100%;
+		right: 10px;/*deixa a direita do site*/
+		top: 0px;/*encostado na ponta do site no zero*/
+	}
+</style>
+
+	<style type="text/css">/*css ficam aqui*//*style edição das palavras escrita*/
+		h1{
+		font-family: Arial;/*seria tipo de fonte escrita*/
+		font-size: 30pt;/*tamanho dela*/
+		color: #9400D3;/*cor do h1 em hexadecimal*/
+		text-shadow: 5px 5px 5px black; /*sombra na letra em cada direção*/
+		text-align: center/*centralizar as palavras no site*/
+		}
+
+	.classum{/*css de uma class-class é melhor aplicar a mais de um elemento*/
+	background:#ffcc33;/*cobre a palavra com uma faixa amarela*/
+	word-spacing: 2em;/*espaçamento letras distancia*/
+	border-style: dashed; /* estilo de borda pontilhado */
+	border-width: 3px; /* espessura de borda 3px */
+	border-left-width: 25px; /* espessura da borda a esquerda do site */
+    border-right-width: 10px; /* espessura da borda a direita do site */
+	border-color: green;  /* cor da linha da borda */
+	}
+	#idum{/*css de um id-id de identificação, para um unico elemento*/
+	background:red;/*cobre da cor colocada a palavra frase*/
+	font-size: 3em; /* fonte tamanho 3 vezes o tamanho da fonte corrente */
+	color:#ccff00; /* cor da fonte esverdeada */
+	border-top: 10px solid #ffcc00; /* borda superior com espessura de 2px estilo sólido e cor amarela */
+	border-bottom: 10px solid black; /* borda inferior com espessura de 2px estilo sólido e cor preta */
+	}
+
+#pidhello{/*modifica um paragrafo especifico, usando a id*/
+	font-family:"trebuchet MS" Arial,Helvetica,sans-serif; /*letra do paragrafo*/
+	color: black;/*cor do paragrafo*/
+	margin: 10px;/*margim de distancia do paragrafo cima e baixo*/
+	padding: 0px;/*distandia a esquerda afasta */
+	text-decoration: underline;/*faz um traço abaixo*/
+	font-weight: bold;/*deixa em negrito*/
+	/*float: left;deixa a esquerda do site- 'nao fica adequadado titulo foi junto'*/
+	background-color: #CCC/*cobre o paragrafo com uma cor-igual o background*/
+}
+#idpitalic{
+	font-style: italic;/*estilo da letra,italic entre outras*/
+}
+	</style>
+	
+	<style type="text/css">/*palavras e fotos que se ampliam style*/
+ul#dospontos {
+	width:700px; /*largura*/
+	margin: 0 auto; /*margem*/
+	padding:50px;/*borda*/
+	/*overflow:hidden; */
+	list-style:none; /*sem pontos na listra*/
+}
+ul#dospontos li{
+	/*float: left;*//*deixa os quadrados alinhados a esquerda um do lado do outro*/
+	width: 100px;/*largura*/
+	height:150px;/*altura*/
+	margin: 10px;/*margem de distanciamento*/
+	border: 5px solid gray;/*cor da borda solid gray ,e cria a borda com border*/
+}
+
+ul#dospontos li#foto01 {/*coloca uma foto nos quadrados */
+	background: url(foto.jpg) no-repet;
+	background-position: 50% 50%;/*posição de cada uma delas fazer...*/
+	background-size: 40px 400px;
+	background-color: /*seria a cor de dentro*/
+}
+ul#dospontos li#foto01: hover{
+	background-position: 0px 0px;/*reduz ou aumenta a tela ao tamanho visivel a tela com hover*/
+	background-size: 200px 200px;
+}
+
+ul#dospontos li#foto02 {/*coloca uma foto nos quadrados */
+	background: url(foto.jpg) no-repet;
+	}/*...*/
+	
+	ul#dospontos li:hover{/*hover: da um zoom na foto em geral e maximiza ela, abaixo detalhes do zoom*/
+		transform: scale(1.5);/*amplia a imagem ao passa o mouse e mostra oq esta escrito no li*/
+transition: all 0.4s ease-in;/*tempo em q é ampliado a imagem*/
+	}
+
+ul#dospontos li span {/*remove o span do site ou as letras escrita na imagem */
+	opacity: 0;/*remove se for 0 se for 1 aparece*/
+	font-size: 9pt;/*muda tamanho letra*/
+    line-height:;/*coloca para baixo as letras*/
+    padding:;/*aumenta largura letra*/
+    color: /*muda cor*/
+    text-shadow:;/*sombra*/
+    background-color: /*fundo entre letra muda a cor*/
+}
+ul#dospontos li:hover span {/*quando passar o mouse ali o span ou escrita aparece na imagem*/
+	opacity: 1;
+}
+	</style>
+
+<style type="text/css">/*layout exemplo style um abaixo do outro*/
+	#idmain{
+		width: 300px;
+		background-color: purple;/*preenche de uma cor*/
+	}
+	.janela{/*caixa de css,box shadow(sombra da caixa):lateral direita,baixo+,borrado somrbra, cor sombra*/
+		/*box-shadow: 10px 10px 5px #999;*/
+		/*position: absolute;/*para posicionar elementos*/
+		/*top: 50px;left:50px;*//*deixa no topo do site*/
+		height: 200px;/*tamanho da janela altura*/
+		width: 300px;/*largura da janela*/
+		background: radial-gradient(blue, red);/*uma espiral central a cor azul vermelha bordal*/
+		/*background: linear-gradient( to right, blue, red);*//*gradiente:janela começa com azul termina vermel*/
+		/*background: linear-gradient( to top, blue, red);*//*para cor cima e baixo*/
+		/*background-color: green;*//*caso queira uma cor inteira na tela*/
+		margin-right:5px;/*ir mais a direita - não funcionou aqui*/
+		text-align: center;/*texto paragrafo vai mais para o centro*/
+		float: left;/*float era para deixa um do lado do outro'mas só funciona com background color'*/
+	}
+	.janela2{
+		background-color:yellow;
+		height: 300px;/*tamanho da janela altura*/
+		/*width: 300px;/*largura da janela*/
+		padding: 20px;/*distanciamento do paragrafo-para não ficar grudado*/
+}
+	footer{/*footer modificado direto sem class nem id*/
+		padding: 5px;
+		width: 300px;
+		background-color: green;
+		margin-top: 5px;/*distanciamento do footer com a janela*/
+	}
+</style>
+<style type="text/css">/*leyout um do lado do outro posição style*/
+	.classmain{
+		color: blue;/*letras das janelas ficam azuis*/
+		background-color: white;/*main é geral- cobre ao fundo toda a janela com cor*/
+	}
+	.classheader{
+		background-color: rgb(255,102,51);/*deixa laranja parte de cima da janela header*/
+		height: 50px;
+		margin-bottom: 20px;/*cria uma margem no programa espaçamento abaixo*/
+}
+
+	.janela3{
+		background-color: rgb(153,204,51);/*cria a janela ou barra verde verde*/
+		height:340px;/*para ficar certo um do lado do outro esses height*/
+		width: 600px;
+		float: left;/*para deixar lado a lado do site*//*float:right seria terceira janela */
+		margin-left: 20px;/*distanciamento entre lado esquerdo do site*/
+	}
+	.janela4{
+		background-color: rgb(255,204,51);/*cor da janela amarela*/
+		height: 300px;/*height usada para ficar certo no site*/
+		padding: 20px;/*distanciamento para baixo- não ficar grudado*/
+		margin-left:20px;/*distanciamento entre duas janelas*/
+		width: 600px;/*comprimento criado*/
+		float: left;/*deixando alinhado um do lado do outro a esquerda com float*/
+		margin-bottom: 10px;/*deu o espaçamento certo para baixo footer- mesmo tendo duas janelas alinhadas*/
+	}
+	.classfooter{
+		background-color: green;
+		clear: both;/*corrigir algum erro de alteração caso necessario both*/
+		margin-top: 10px;/*espaçamento para cima não funcionou por algum motivo do programa*/
+		height: 30px;
+	}
+</style>
+
+<style type="text/css">/*janela com rolagem style*/
+	.janela5rolagem{
+		background-color: rgb(153,204,51);/*verde no site*/
+		padding: 10px;
+		/*position:absolut; /*deixa absoluto mais fixo mas fica acima do site então daria ruim*/
+		top: 50px;
+		left: 50px;
+		height: 150px;
+		width: 150px;
+		overflow: auto;/*rolagem auto de barra de rolagem//possuem hiddem, visible e scroll o auto melhor */
+	}
+</style>
+
+<style type="text/css">/*menu horizontal ex*/
+		nav ul li{
+			list-style-type: none;/*tira os pontos do ul e as numeraçoes do li */
+			display: inline;/*deixa o menu horizontal*/
+		}
+        nav ul{
+	text-align: center;/*alinha o menu para o centro*/ 
+        }
+nav ul li a{
+	padding: 10px 30px;/*distanciamento*/
+	text-decoration: none;/*remove o sublinhado*/
+	background-color: cornflowerblue;/*camada azul sobre*/
+	color: #fff;/*cor da letra*/
+	display: inline-block;/*mantem um distancia pequena mais organizadocpeque no detalhe*/
+	margin-right: -3px;/*distancia a apenas 1px de distancia por ai*/
+	width: 120px;
+}
+
+nav ul li a:hover{/*passar o mouse por cima com hover e mudar cor exemplo */
+	background-color: chartreuse;/*passa o mouse por cima e fica verde as opçoes*/
+}
+
+li:nth-child(odd){/*listra com cor diferente uma cinza outra azulada mas tem q ser em uma comum*/
+			background-color: aquamarine;
+		}
+	</style>
+
+
+</head>
+<body>
+	<main id="idposi"><h1>---CSS - movel no site---</h1></main>
+
+	<h1 style="text-align: center">css, parte visual de um site</h1>
+	
+	<h5 id="idum">idum.cor, letra, designer grafico e etc</h3>
+	<h5 class="classum">classum.para tipo beleza de um site, front</h5>
+	<p id="pidhello">p hello,world</p>
+	<p id="idpitalic">italico style</p>
+
+<h1>span, para colocar uma frase comum ou fotos que se ampliam</h1>
+
+<ul id="dospontos"><!--id para identificar no css algo,criando ul que cobre todo o menu-->
+	<li id="foto01"><span>dospontos, pontos separados </span></li><!--li, para pontos dentro do ul, opçoes-->
+	<li id="foto02"><span>um embaixo do outro</span></li>
+	<li id="foto03"><span>tipo uma listra</span></li>
+	<li id="foto04"><span>four five six seven</span></li>
+</ul>
+
+<h1>janela a abaixo em css</h1>
+
+<main id="idmain">
+	<p>main da pagina em si</p>
+<header><p>cabeçalho</p></header>
+
+<section class="janela"><p>1 janeja fala tu'section'</p></section>
+<section class="janela2"><p>segunda janela</p></section>
+
+<footer>footer abaixo dos outros</footer>
+</main>
+
+<h1>janela uma do lado da outra ou layout</h1>
+<main class="classmain">
+	<header class="classheader">
+	<p>main da pg- com janelas lado a lado</p>
+	</header>
+<section class="janela3"><p>primeira janela	</p></section>
+<section class="janela4"><p>segunda janela</p></section>
+<footer class="classfooter">abaixo das janelas</footer>
+</main>
+
+<h1>conteudo com barra de rolagem</h1>
+
+<div>
+	<section class="janela5rolagem">
+		<p>a propriedade overflow ou barra de rolagem que mantem o conteudo a amostra dentro da janela naquele espaço especifico - !!!!!!!!!!hello world!!!!! hello friend!!!!!</p>
+	</section>
+</div>
+
+<nav>
+<h1>site horizontal e listrado</h1>
+<ul>
+	<li><a href="">primeiro</a></li>
+	<li><a href="">segundo</a></li>
+	<li><a href="">terceiro</a></li>
+	<li><a href="">quarto</a></li>
+</ul>
+</nav>
+
+<ul>
+	<li>primeiro</li>
+	<li>segundo</li>
+	<li>terceiro</li>
+	<li>quarto</li>
+	<li>quinto</li>
+</ul>
+</nav>
+
+</body>
+</html>
+<!---->
+/**/
+<!>
