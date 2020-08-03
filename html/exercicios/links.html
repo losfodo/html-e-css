@@ -1,0 +1,20 @@
+<h1>Links</h1>
+
+<!-- URL Absoluta -->
+<a id="inicio" href="https://www.google.com.br">Google 1</a><br><!--na mesma pagina vai pro site google,,tem q ter o https se nao pensa q é host-->
+<a href="https://www.google.com.br" target="_blank">Google 2</a><br><br><!--abre nova aba e vai pro google-->
+
+<!-- URL Relativa -->
+<a href="index.html">Voltar 1</a><br><!--tem achar index.html dentro pasta exercicios-->
+<a href="/index.html">Voltar 2</a><br><!--volta pra pagina inicial pq tem /-->
+<a href="../index.html">Voltar 3</a><br><br><!--cada ../../volta cada pasta até a que voce querer-->
+
+<a href="mailto:email@empresa.com.br">Entre em contato</a><br><br><!--mailto para colocar um email-->
+
+<div id="noticia" style="position:absolute;top:2000px;"><!--css inline style no msm linha q vai modificar no html:posição:Com ele você pode posicionar qualquer elemento de acordo com o elemento pai que tenha um position diferente de static.,,top distanciamento 2000px-->
+    <h1>Notícia Buemba!</h1>
+    <p>Não era nada... :)</p>
+    <a href="#inicio">Voltar Inicio</a><!--volta para cima no site pela id inicio na url google-->
+</div>
+
+<a href="#noticia">Ir para Notícia</a><!--fica em cima do site #noticia q vai para a noticia no site e id noticia em baixo pq foi modificado com css-->

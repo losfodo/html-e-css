@@ -1,0 +1,48 @@
+<h1>Projeto</h1>
+<ul class="tree"><!--class aponta para uma css conecta como uma id só q class,,ul geral-->
+    <li><!--li 1 de backend-->
+        <span wm-folder>backend</span><!--backend tem app dentro-->
+        <ul>
+            <li><!--possui app e config-->
+                <span wm-folder>app</span><!--app possui produto usuario e vendajs dentro,,span wm-folder para js ser feito-->
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>config</span>
+                <ul>
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><!--li segundo-->
+        <span wm-folder>frontend</span><!--span wm-folder serve como id para js-->
+        <ul>
+            <li>
+                <span wm-folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css"><!--link rel="stylesheet" aponta para um css com referencia href "referencia da code do site"-->
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder => {//conecta todo o wm-folder.faz foreach para pegar cada um e dispara função
+        folder.onclick = function(e) {//gerando click nessas opçoes
+            const ul = folder.nextElementSibling//nextElementSibling:pegar proximo elemento depois do folder spam q é 'ul'
+            const d = ul.style.display//fazer display no style do ul
+            ul.style.display = d === 'none' ? 'block' : 'none'//ul display d for estritamente igual none:nao visivel recebe block:visivel, se não é visivel ai aplica none para invisivel
+        }//ou seja clica abre o folder clica denovo abaixa o folder.
+    })
+</script>

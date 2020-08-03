@@ -1,0 +1,50 @@
+<video id="meuVideo" width="800" height="450" controls autoplay controlsList="nodownload"><!--videos html,controls para aparecer controles de video-->
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4"><!--source pode aplicar varias fontes, tipo mp4 mais compativel-->
+    Seu browser não suporta a tag de vídeo.<!--caso video não carregue-->
+</video><!--autoplay:ao entrar no site o video começa automaticamente,controlsList="nodownload" : para não ter o icone de baixar o video-->
+
+<div wm-progresso="meuVideo" class="progresso"><!--wm-progresso:representa barra de progresso,essa linha define moldura progresso-->
+    <div></div><!--div interna onde ficara os valores,-->
+</div>
+
+<div>
+    <button wm-play="meuVideo">Play</button><!--botoes play e pause no video-->
+    <button wm-pause="meuVideo">Pause</button>
+</div>
+
+<style>
+    .progresso {/*define moldura progresso*/
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;/*borda risco cinza grossura 1px*/
+        margin: 20px;/*distanciamento*/
+    }
+
+    .progresso > div {/*fazer css na 'div interna' dentro do elemento div progresso*/
+        background-color: red;/*cor frente vermelha*/
+        color: #fff;/*cor de fundo branco*/
+        height: 100%;
+        text-align: right;/*alinhado a direita*/
+        font-size: 14px;/*tamanho da fonte tananho letra exemplo*/
+        width: 0%;/*largura do background vermelho inicia 0*/
+    }
+</style>
+
+<script>
+    function configurarVideo(id) {//função rrecebe id
+        const video = document.getElementById(id)//pega tag video com byid
+        video.oncontextmenu = () => false//nao deixar fazer doawnload do video de qualquer jeito agr
+
+        document.querySelector(`[wm-play=${id}]`).onclick = e => video.play()//filtra atributo com id especifico pegando botão play
+        document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause()//pause..
+
+        setInterval(() => {//chamada da função
+            const percentual = (video.currentTime / video.duration) * 100//pega percentual atual com video.currentTime /dividi pela duração e multiplica 100
+            const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`)//pega a div interna da div desta forma
+            valorDiv.style.width = `${percentual}%`//largura da vid recebe o percentual
+            valorDiv.innerHTML = `${percentual.toFixed(1)}%`//colocar valor explicito com uma casa decimal fixa
+        }, 500)//cada 500 milisegundos atualiza
+    }
+
+    configurarVideo('meuVideo')//id meu video chamando função..
+</script>

@@ -1,0 +1,55 @@
+<table><!--tabela-->
+    <caption>Produtos</caption><!--titulo da tabela-->
+    <thead><!--defini area cabeçalho da tabela-->
+        <tr>
+            <th>Produto</th><!--opçoes do thead-->
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody><!--corpo da tabela-->
+        <tr><!--table rou-->
+            <td>iPad</td><!--table data-->
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+        </tr>
+        <tr><!--segunda linha da tabela do corpo-->
+           <td>Sansung S9</td> 
+           <td>2649,00</td>
+           <td>8</td>
+           <td>21192,00</td>
+        </tr>
+    </tbody>
+    <tfoot><!--final da tabela-->
+        <tr>
+            <td colspan="3">Total</td><!--colspan para ocupar tres colunas o total,,com rowspan ocupa linhas-->
+            <td>37637,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;/*para não ter borda o collapse*/
+    }
+
+    th, td {
+        padding: 10px;/*mais espaçamento px*/
+    }
+
+    thead tr {
+       border-bottom: solid 3px #444; /*no thead tr principal em baixo bottom tera borda solida com 3px cinza*/
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;/*passando mouse por cima do body da tabela mostra a cor do background*/
+    }
+
+    tfoot {
+        background-color: #444;/*cor mais escura*/
+        color: #fff;/*letras no footer branco forte*/
+        font-weight: bold;/*negrito na fonte */
+    }
+</style>

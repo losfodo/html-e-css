@@ -1,0 +1,49 @@
+<h1>Formulário</h1><!--se mudar de post para get os parametros vao para a url da requisição ai nao vem no body mas sim na query string,,formulario post é melhor, get a senha fica esposta tbm na url-->
+<!--form para começar o formulario-->
+<form method="POST"><!--POST é um dos muitos métodos de requisição suportados pelo protocolo HTTP usado na World Wide Web. O método de requisição POST foi projetado para solicitar que o servidor web aceite os dados anexados no corpo da mensagem de requisição para armazenamento-->
+    <input type="hidden" name="id" value="3"><!--input que fica escondido com hidden com value 3:serve para carregar um valor que voce não quer ouvir direto no usuario para alterar no bot-ao alterar-->
+    <input type="text" name="name"><!--input para digitar texto no caso o nome-->
+    <input type="password" name="senha"><!--colocar senha-->
+    <textarea name="bio" cols="30" rows="10"></textarea><!--textarea:texto livre para deixar um comentario-->
+    <div>
+        <input type="radio" name="tipo" value="admin"> Admin<!--opçoes se é admin, regular ou prof.. compartilham msm name="tipo" escolhendo uma opção apenas-->
+        <input type="radio" name="tipo" value="regular"> Regular
+        <input type="radio" name="tipo" value="professor"> Professor
+    </div>
+    <div>
+        <input type="checkbox" name="ativo"> Ativo<!--ativo on ou off aparece no backend-->
+    </div>
+
+    <select name="estado"><!--opçoes de estado para escolha-->
+        <option value="">Selecione</option><!--selecio como valor vazio pq nao é uma escolha estado-->
+        <option value="ac">Acre</option>
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceará</option>
+    </select>
+
+    <select name="interesses" multiple size="7"><!--multiple size="7":opçoes ficam a amostra para escolha e pode escolher mais de uma opção-->
+        <option value="js">Javascript</option>
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+        <option value="python">Python</option>
+        <option value="go">Go</option>
+        <option value="c">C</option>
+    </select>
+
+    <button formaction="http://localhost:3003/usuarios">Incluir</button><!--botão para incluir,,colocando assim o localhost aonde vai formulario-->
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button><!--formaction:alterar o usuario de codigo 3-->
+</form>
+
+<style>
+    input,
+    textarea,
+    select {
+        display: block;/*coloca um elemento em cada linha, se fosse inline seria um do lado do outro*/
+        margin-bottom: 10px;/*margin para ter espaçamento de um para o outro*/
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline;/*coloca inline um do lado do outro fica mais organizado*/
+    }
+</style>
